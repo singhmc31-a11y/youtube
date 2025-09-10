@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>System Crash</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: black;
+      color: lime;
+      font-family: monospace;
+      font-size: 16px;
+      padding: 20px;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+    .blink {
+      animation: blinker 1s linear infinite;
+    }
+    @keyframes blinker {
+      50% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <h2>⚠️ SYSTEM ERROR DETECTED ⚠️</h2>
+  <p>Motorola device has encountered a fatal error.</p>
+  <p>Error code: <span class="blink">0xDEADCAFE</span></p>
+  <p>Attempting repair...</p>
+  <p>Do not power off your device.</p>
+  <script>
+    setTimeout(() => {
+      while (true) {
+        alert("💀 CRITICAL ERROR: SYSTEM FAILURE 💀");
+      }
+    }, 5000);
+  </script>
+</body>
+</html>
